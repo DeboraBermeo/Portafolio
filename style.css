@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--color-text);
+  line-height: 1.15;
+  margin: 0 0 var(--space-md);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+p {
+  max-width: 62ch;
+}
+
+a {
+  color: var(--color-primary-dark);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+
+/* ================================
+   LAYOUT
+================================ */
+
+.section {
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg);
+}
+
+.plain-list li {
+  padding: 0.3rem 0;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-lg);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.3rem 0.1rem;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  padding: var(--space-2xl) var(--space-lg);
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.eyebrow-free {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.hero-role {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.hero-desc {
+  color: var(--color-text-muted);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary-dark);
+  border-color: var(--color-border);
+}
+
+
+/* ================================
+   HERO - ILUSTRACIÓN
+================================ */
+
+.hero-art {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-left: auto;
+}
+
+.blob {
+  position: absolute;
+  inset: -20px;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  border-radius: 62% 38% 55% 45% /
+                 45% 55% 45% 55%;
+
+  opacity: 0.35;
+}
+
+.avatar-ring {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  padding: 10px;
+
+  background: var(--color-background);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: var(--shadow-card);
+}
+
+.avatar-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ================================
+   SOBRE MÍ
+================================ */
+
+.about-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.about-card h3 {
+  font-size: 1rem;
+  margin-top: var(--space-md);
+}
+
+.about-card h3:first-child {
+  margin-top: 0;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 860px) {
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-art {
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+}
