@@ -22,12 +22,15 @@
           <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
           <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
           <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#design-system" class="nav-link">Design System</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
  
       <div class="header-actions">
-        <!-- TODO (pendiente próxima entrega): botón de modo claro/oscuro -->
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Cambiar tema claro/oscuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
         <button id="menu-toggle" class="icon-btn menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
           <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
@@ -173,9 +176,8 @@
         <section id="proyectos" class="section" aria-labelledby="proyectos-title">
       <div class="section-inner">
         <h2 id="proyectos-title">Proyectos destacados</h2>
-        <p class="section-lead">Algunos de los proyectos que he desarrollado durante la carrera.</p>
-
-        <!-- TODO (pendiente próxima entrega): funcionalidad de filtrado por tecnología -->
+        <p class="section-lead">Filtra por tecnología o haz clic en una tarjeta para ver más detalle.</p>
+ 
         <div class="filter-bar" id="filter-bar" role="group" aria-label="Filtrar proyectos por tecnología">
           <button class="filter-btn is-active" data-filter="todos" type="button">Todos</button>
           <button class="filter-btn" data-filter="javascript" type="button">JavaScript</button>
@@ -184,7 +186,7 @@
  
         <div class="projects-grid" id="projects-grid">
  
-          <article class="card project-card" data-tech="javascript,html,css"
+          <article class="card project-card" data-tech="javascript,html,css" tabindex="0" role="button"
                     data-title="Juego de memoria"
                     data-desc="Se trata de un proyecto en el cual es un juego de memoria de cartas, el cual ayuda a desarrollar habilidades cognitivas y mentales."
                     data-problem="Tenia amigos y conocidos que tenian muy mala capacidad de retención de información entonces se desarrollo este pequeño juego."
@@ -192,9 +194,7 @@
                     data-repo="https://github.com/Ezequiel0117/Juego-Tecnica.git"
                     data-demo="">
             <figure class="card-figure">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='p1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d9c6f5'/%3E%3Cstop offset='1' stop-color='%23b7a3e6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23p1)'/%3E%3Ccircle cx='330' cy='40' r='60' fill='%23ffffff' opacity='0.15'/%3E%3C/svg%3E"
-                   alt="Captura ilustrativa de la aplicación de lista de tareas" loading="lazy">
-              <figcaption class="sr-only">Vista previa de Lista de tareas interactiva</figcaption>
+              <img src="img/juego.cartas.jpeg">
             </figure>
             <div class="card-body">
               <h3>Juego de memoria</h3>
@@ -205,7 +205,7 @@
             </div>
           </article>
 
-          <article class="card project-card" data-tech="javascript,html,css"
+          <article class="card project-card" data-tech="javascript,html,css" tabindex="0" role="button"
                     data-title="Mercado Sostenible"
                     data-desc="Este proyecto se trata de un mercado digital en donde puedes comprar tus productos muy facil y rapido."
                     data-problem="El ir a hacer mercado muchas veces es complicado y cansado."
@@ -213,9 +213,7 @@
                     data-repo="https://github.com/Ezequiel0117/Pagina_Web_Agronomia.git"
                     data-demo="">
             <figure class="card-figure">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='p1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d9c6f5'/%3E%3Cstop offset='1' stop-color='%23b7a3e6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23p1)'/%3E%3Ccircle cx='330' cy='40' r='60' fill='%23ffffff' opacity='0.15'/%3E%3C/svg%3E"
-                   alt="Captura ilustrativa de la aplicación de lista de tareas" loading="lazy">
-              <figcaption class="sr-only">Vista previa de Lista de tareas interactiva</figcaption>
+              <img src="img/mercado.jpeg">
             </figure>
             <div class="card-body">
               <h3>Mercado Sostenible</h3>
@@ -226,7 +224,7 @@
             </div>
           </article>
  
-          <article class="card project-card" data-tech="python"
+          <article class="card project-card" data-tech="python" tabindex="0" role="button"
                     data-title="Biblioteca Virtual"
                     data-desc="En este proyecto se hizo la idea de hacer que los libros esten al alcance de la mano, sin necesidad de ir a una bilbioteca y poder leer lo que quieras."
                     data-problem="En ciertos momentos no existe esa oportunidad de ir a la biblioteca a poder leer lo que te gusta o a investigar algun tema."
@@ -234,9 +232,7 @@
                     data-repo="https://github.com/carlos1544/Viaje-entre-lineas.git"
                     data-demo="">
             <figure class="card-figure">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='p3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b7a3e6'/%3E%3Cstop offset='1' stop-color='%23f3c6e3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23p3)'/%3E%3Crect x='240' y='30' width='120' height='120' fill='%23ffffff' opacity='0.12' rx='16'/%3E%3C/svg%3E"
-                   alt="Captura ilustrativa del analizador de notas académicas" loading="lazy">
-              <figcaption class="sr-only">Vista previa de Analizador de notas académicas</figcaption>
+              <img src="img/biblioteca.jpeg">
             </figure>
             <div class="card-body">
               <h3>Biblioteca Virtual</h3>
@@ -251,7 +247,6 @@
       </div>
     </section>
  
-        <!-- TODO (pendiente próxima entrega): conectar clic en tarjeta -> abrir este modal con los datos del proyecto -->
         <div class="modal-overlay" id="modal-overlay" hidden>
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button class="modal-close" id="modal-close" type="button" aria-label="Cerrar detalle del proyecto">✕</button>
@@ -265,6 +260,95 @@
         </div>
       </div>
     </div>
+ 
+        <section id="design-system" class="section section-tint" aria-labelledby="ds-title">
+      <div class="section-inner">
+        <h2 id="ds-title">Design System</h2>
+        <p class="section-lead">Las decisiones visuales y componentes reutilizados a lo largo del portafolio.</p>
+ 
+        <h3 class="ds-subtitle">Colores</h3>
+        <div class="color-grid">
+          <div class="color-swatch"><span class="swatch" style="background: var(--color-primary);"></span>Primary<code>#9b87c4</code></div>
+          <div class="color-swatch"><span class="swatch" style="background: var(--color-secondary);"></span>Secondary<code>#f3a6c9</code></div>
+          <div class="color-swatch"><span class="swatch" style="background: var(--color-background); border:1px solid var(--color-border);"></span>Background<code>#fdfbff</code></div>
+          <div class="color-swatch"><span class="swatch" style="background: var(--color-surface); border:1px solid var(--color-border);"></span>Surface<code>#f3edfa</code></div>
+          <div class="color-swatch"><span class="swatch" style="background: var(--color-text);"></span>Text<code>#2e2140</code></div>
+          <div class="color-swatch"><span class="swatch" style="background: var(--color-text-muted);"></span>Text muted<code>#7a6a8c</code></div>
+        </div>
+ 
+        <h3 class="ds-subtitle">Tipografía</h3>
+        <div class="type-scale">
+          <h1 class="type-sample">H1 — Fraunces 700</h1>
+          <h2 class="type-sample">H2 — Fraunces 600</h2>
+          <h3 class="type-sample">H3 — Fraunces 500</h3>
+          <p class="type-sample">Párrafo — Outfit 400. Este es el estilo de texto para el contenido general del portafolio.</p>
+          <p class="type-sample text-muted">Texto secundario — Outfit 400, color atenuado para aclaraciones.</p>
+          <p class="type-sample"><a href="#top">Enlace de ejemplo</a> dentro de un párrafo.</p>
+        </div>
+ 
+        <h3 class="ds-subtitle">Espaciado</h3>
+        <div class="space-scale">
+          <div class="space-row"><span class="space-box" style="width: var(--space-sm);"></span><code>--space-sm · 0.5rem</code></div>
+          <div class="space-row"><span class="space-box" style="width: var(--space-md);"></span><code>--space-md · 1rem</code></div>
+          <div class="space-row"><span class="space-box" style="width: var(--space-lg);"></span><code>--space-lg · 2rem</code></div>
+          <div class="space-row"><span class="space-box" style="width: var(--space-xl);"></span><code>--space-xl · 3.5rem</code></div>
+        </div>
+ 
+        <h3 class="ds-subtitle">Componentes</h3>
+        <div class="component-showcase">
+ 
+          <div class="component-demo">
+            <p class="component-label">Botones</p>
+            <div class="component-row">
+              <button class="btn btn-primary" type="button">Botón primario</button>
+              <button class="btn btn-ghost" type="button">Botón secundario</button>
+            </div>
+          </div>
+ 
+          <div class="component-demo">
+            <p class="component-label">Badges</p>
+            <div class="component-row">
+              <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+            </div>
+          </div>
+ 
+          <div class="component-demo">
+            <p class="component-label">Card</p>
+            <article class="card project-card ds-card-demo">
+              <div class="card-body">
+                <h3>Título de proyecto</h3>
+                <p>Breve descripción del proyecto que aparece en la tarjeta.</p>
+                <ul class="tag-list"><li class="badge">Tag</li></ul>
+              </div>
+            </article>
+          </div>
+ 
+          <div class="component-demo">
+            <p class="component-label">Inputs</p>
+            <div class="component-row component-col">
+              <label class="field">
+                <span>Etiqueta de campo</span>
+                <input type="text" placeholder="Texto de ejemplo">
+              </label>
+              <label class="field">
+                <span>Textarea</span>
+                <textarea rows="2" placeholder="Mensaje de ejemplo"></textarea>
+              </label>
+            </div>
+          </div>
+ 
+          <div class="component-demo">
+            <p class="component-label">Navbar (miniatura)</p>
+            <div class="mini-navbar">
+              <span class="mini-link">Inicio</span>
+              <span class="mini-link">Proyectos</span>
+              <span class="mini-link">Contacto</span>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </section>
  
         <section id="contacto" class="section" aria-labelledby="contacto-title">
       <div class="section-inner two-col">
@@ -280,24 +364,27 @@
           </ul>
         </div>
  
-        <!-- TODO (pendiente próxima entrega): validación JS personalizada y mensaje de estado sin recargar la página -->
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" novalidate>
           <label class="field">
             <span>Nombre</span>
             <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+            <small class="field-error" id="name-error" role="alert"></small>
           </label>
-
+ 
           <label class="field">
             <span>Correo electrónico</span>
             <input type="email" id="email" name="email" required autocomplete="email">
+            <small class="field-error" id="email-error" role="alert"></small>
           </label>
-
+ 
           <label class="field">
             <span>Mensaje</span>
             <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+            <small class="field-error" id="message-error" role="alert"></small>
           </label>
-
+ 
           <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -305,10 +392,11 @@
   </main>
  
     <footer class="site-footer">
-    <p>© 2026 Debora Bermeo · Hecho con HTML, CSS y JavaScript. <em>Avance de entrega — 70%.</em></p>
+    <p>© 2026 Debora Bermeo · Hecho con HTML, CSS y JavaScript.</p>
     <button id="back-to-top" class="icon-btn" type="button" aria-label="Volver al inicio">↑</button>
   </footer>
  
   <script src="script.js"></script>
 </body>
 </html>
+ 
