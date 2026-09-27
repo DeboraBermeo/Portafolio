@@ -40,7 +40,7 @@ No necesita instalar nada ni usar programas especiales, funciona directo en el n
 
 **Si lo clonas desde GitHub:**
 ```bash
-git clone https://github.com/<usuario>/<repositorio>.git
+git clone https://github.com/DeboraBermeo/Portafolio.git
 ```
 Luego entra a la carpeta descargada y abre `index.html` como se indicó arriba.
 
